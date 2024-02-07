@@ -3,60 +3,20 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full',
-  },
-  {
-    path: 'home',
-    loadChildren: () =>
-      import('./modules/home/home.module').then((m) => m.HomePageModule),
-  },
-  {
-    path: 'barcode-scanning',
-    loadChildren: () =>
-      import('./modules/barcode-scanning/barcode-scanning.module').then(
-        (m) => m.BarcodeScanningModule,
-      ),
-  },
-  {
-    path: 'face-detection',
-    loadChildren: () =>
-      import('./modules/face-detection/face-detection.module').then(
-        (m) => m.FaceDetectionModule,
-      ),
-  },
-  {
-    path: 'face-mesh-detection',
-    loadChildren: () =>
-      import('./modules/face-mesh-detection/face-mesh-detection.module').then(
-        (m) => m.FaceMeshDetectionModule,
-      ),
-  },
-  {
-    path: 'selfie-segmentation',
-    loadChildren: () =>
-      import('./modules/selfie-segmentation/selfie-segmentation.module').then(
-        (m) => m.SelfieSegmentationModule,
-      ),
-  },
-  {
-    path: 'translation',
-    loadChildren: () =>
-      import('./modules/translation/translation.module').then(
-        (m) => m.TranslationModule,
-      ),
-  },
-  {
-    path: '**',
-    redirectTo: 'home',
+    pathMatch: 'full'
   },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
