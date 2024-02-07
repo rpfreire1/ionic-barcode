@@ -32,3 +32,6 @@ npm-debug.log*
 /www
 /cert.pem
 /key.pem
+/.github/
+/android/
+/ios/
