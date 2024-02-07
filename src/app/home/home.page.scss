@@ -1,0 +1,43 @@
+ion-toolbar{
+  background-color: var(--ion-color-redware);
+  color: var(--ion-color-redware-contrast);
+}
+ion-title{
+  width: 100%;
+}
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+ion-button{
+  --background: var(--ion-color-redware);
+  --background-hover: var(--ion-color-redware);
+  --background-activated: var(--ion-color-redware-shade);
+  --background-focused: var(--ion-color-redware-shade);
+
+  --color: var(--ion-color-redware-contrast);
+}
